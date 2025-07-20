@@ -7,6 +7,8 @@ class Solution {
         for(int num: nums){
             temp = num+temp;
         }
+        System.gc();
         return sum-temp;
+        
     }
 }
