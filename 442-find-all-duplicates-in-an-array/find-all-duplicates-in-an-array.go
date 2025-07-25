@@ -1,11 +1,11 @@
 func findDuplicates(nums []int) []int {
-check:=make(map[int]bool)
+check:=make([]bool, len(nums))
 arr:= []int{}
-for _,num := range nums{
-    if check[num]{
-        arr = append(arr,num)
+for  i := 0 ;i<len(nums);i++{
+    if check[nums[i]-1]{
+        arr = append(arr,nums[i])
     }
-    check[num]= true
+    check[nums[i]-1]= true
 
 }
 return arr
